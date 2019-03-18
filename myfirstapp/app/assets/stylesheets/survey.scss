@@ -1,0 +1,314 @@
+// Place all the styles related to the survey controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/*MOBILE STYLE FIRST*/
+:root {
+    --darker: #29434E
+        /*#001F3F*/
+    ;
+    --lighter: #CFCFCF
+        /*E0E0E0*/
+    ;
+    --softer: #546e7a
+        /*A9B7C4*/
+    ;
+    --tinter: #DFE8F0;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-width: border-box;
+    -moz-width: border-box;
+    -ms-width: border-box;
+    -o-width: border-box;
+    width: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('../img/mosaicETH.png');
+    line-height: 1.1em;
+    font-family: Arial, sans-serif;
+    padding: 1em;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--lighter);
+    padding: 0em 0.6em;
+
+}
+
+header {
+    text-align: center;
+    line-height: 1.7em;
+}
+
+#title {
+    margin: 10px;
+}
+
+#title,
+.top {
+    color: var(--darker);
+}
+
+.marker {
+    text-align: center;
+    padding: 0.5em;
+    background-color: var(--softer);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+    color: var(--lighter);
+}
+
+main {
+    border-radius: 15px;
+    box-shadow: 0 0 20PX 0 rgba(72, 94, 116, 0.7);
+}
+
+form {
+    background-color: var(--tinter);
+    padding: 10px;
+}
+
+#name,
+#email,
+#dropdown,
+fieldset,
+#number,
+#text_area {
+    font-size: 1.1em;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+fieldset legend,
+.comments label {
+    font-size: 1.1em;
+    font-weight: bolder;
+}
+
+.div-number {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.inp-number {
+    margin-right: auto;
+    flex: 1;
+}
+
+.tex-number {
+    margin-left: 5px;
+}
+
+.row p {
+    font-weight: bold;
+}
+
+.rdgroup,
+.cbgroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.rditem,
+.cbitem {
+    width: 140px;
+}
+
+.rditem input[type=radio],
+.cbitem input[type=checkbox] {
+    display: none;
+}
+
+.rditem label,
+.cbitem label {
+    color: var(--darker);
+    background-color: var(--tinter);
+    padding: 5px 15px 5px 28px;
+    display: inline-block;
+    position: relative;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.rditem label:hover,
+.cbitem label:hover {
+    background-color: var(--lighter);
+    border-radius: 10px;
+
+}
+
+.rditem label::before,
+.cbitem label::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    background-color: none;
+    border: solid 2px var(--darker);
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+}
+
+.cbitem label::before {
+    border-radius: 3px;
+}
+
+.rditem input[type=radio]:checked+label,
+.cbitem input[type=checkbox]:checked+label {
+    padding: 5px 10px;
+    background-color: var(--softer);
+    border-radius: 5px;
+    border: solid var(--darker) 1.2px;
+    color: var(--lighter);
+}
+
+.rditem input[type=radio]:checked+label::before,
+.cbitem input[type=checkbox]:checked+label::before {
+    display: none;
+}
+
+.comments textarea,
+#submit {
+    font-size: 1.8em;
+    width: 100%;
+    border: solid var(--softer) 2px;
+}
+
+.btn input {
+    color: var(--darker);
+    background-color: var(--lighter);
+    border: 0.5px;
+    text-transform: uppercase;
+}
+
+.btn input:hover,
+.btn input:focus {
+    background-color: var(--softer);
+    color: var(--lighter);
+    transition: background-color 0.4s ease-out;
+}
+
+.contact {
+    background-color: var(--softer);
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 0.5em;
+}
+
+.contact ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+.contact ul,
+.contact p {
+    margin: 0px;
+    color: var(--lighter);
+}
+
+header span a,
+.contact ul a {
+    color: var(--lighter);
+    line-height: 1.3em;
+    text-decoration: none;
+}
+
+.contact ul a:hover,
+header span a:hover {
+    color: var(--darker);
+}
+
+.contact ul a:visited,
+header span a:visited {
+    color: var(--darker);
+}
+
+.contact ul a:visited:hover,
+header span a:visited:hover {
+    color: var(--tinter);
+}
+
+footer {
+    color: var(--lighter);
+}
+
+/* STYLE FOR BIGGER SCREENS (700plus)*/
+@media(min-width: 700px) {
+
+    .container {
+        max-width: 750px;
+    }
+
+    #title {
+        margin-bottom: 15px;
+        font-size: 2.2em;
+    }
+
+    .marker {
+        text-align: center;
+        font-size: 1em;
+        padding: 20px;
+    }
+
+    .marker p {
+        padding-top: 5px;
+    }
+
+    .row-A,
+    .row-B {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .row-A {
+        justify-content: space-between;
+    }
+
+    .row-A div {
+        margin: 5px 0px;
+    }
+
+    .row-B .element1,
+    .row-B .element2 {
+        width: 345px;
+    }
+
+    .element1 {
+        margin-right: auto;
+    }
+
+    .tex-number {
+        font-size: 12px;
+    }
+
+    .rditem,
+    .cbitem {
+        width: 180px;
+    }
+
+    .rdgroup,
+    .cbgroup {
+        justify-content: space-around;
+    }
+}
