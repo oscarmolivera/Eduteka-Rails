@@ -1,0 +1,33 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+    <div class="field form-group">
+      <%= form.label :name %>
+      <%= form.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :age%>
+      <%= form.number_field :age, class: 'form-control' %>
+    </div>
+
+    <div class="field form-group">
+      <%= form.label :company_id%> 
+      <%= select_tag "name_dropdown", options_from_collection_for_select(Company.all, :id, :name), class: 'form-control'   %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  </div>
+<% end %>

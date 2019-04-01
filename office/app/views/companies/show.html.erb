@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Company Id:</strong>
+  <%= @company.id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Founder:</strong>
+  <%= @company.founder %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @company.year %>
+</p>
+
+<div style="margin-top: 5px;" class="form-group">
+  <%= link_to 'Home', root_path,  class: 'btn btn-info'%>
+  <%= link_to 'Edit', edit_company_path(@company),  class: 'btn' %> |
+  <%= link_to 'Companies', companies_path,  class: 'btn' %> |
+</div>
+

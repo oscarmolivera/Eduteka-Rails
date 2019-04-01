@@ -1,0 +1,8 @@
+<h1>Editing Company</h1>
+
+<%= render 'form', company: @company %>
+<div style="margin-top: 5px;" class="form-group">
+    <%= link_to 'Home', root_path,  class: 'btn btn-info'%>
+    <%= link_to 'Show', @company,  class: 'btn' %> |
+    <%= link_to 'Companies', companies_path,  class: 'btn' %>
+</div>

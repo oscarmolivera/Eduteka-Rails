@@ -1,0 +1,7 @@
+<h1>Editing Employee</h1>
+<%= render 'form', employee: @employee %>
+<div style="margin-top: 5px;" class="form-group">
+  <%= link_to 'Home', root_path,  class: 'btn btn-info'%>
+  <%= link_to 'Show', @employee,  class: 'btn' %> |
+  <%= link_to 'Employees', employees_path,  class: 'btn' %> |
+</div>
