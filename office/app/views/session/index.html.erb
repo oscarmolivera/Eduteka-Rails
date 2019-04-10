@@ -1,14 +1,14 @@
 
-
 <div class="wrapper fadeInDown">
   <div id="formContent">
 
     <!-- Login Form -->
     <%= form_tag(login_path) do |f|%>
-      <%= text_field :name, '', class: 'fadeIn second', placeholder: 'login' %>
+      <%= text_field :name, '', class: 'fadeIn second', placeholder: 'Username' %>
       <%= password_field :password, '', class: 'fadeIn third', placeholder: 'password' %>
       <%= submit_tag '', value: 'Log in', class: 'fadeIn fourth' %>
     <% end%>
+    <p id="notice"><%= notice %></p>
     
   </div>
 </div>
