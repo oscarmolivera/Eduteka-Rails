@@ -1,6 +1,7 @@
+# Employee Controller Code
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_employee, only: %i[show edit update destroy]
+  before_action :login_admin
   # GET /employees
   # GET /employees.json
   def index
@@ -9,8 +10,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees/1
   # GET /employees/1.json
-  def show
-  end
+  def show; end
 
   # GET /employees/new
   def new
@@ -27,7 +27,7 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-    @employee.company_id= params[:company][:company_id].to_i
+    # @employee.company_id = params[:company][:company_id].to_i
     respond_to do |format|
       if @employee.save
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
@@ -64,13 +64,18 @@ class EmployeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_employee
-      @employee = Employee.find(params[:id])
-    end
+  # Validation for the admin user
+  def login_admin
+    redirect_to login_path if session[:user].nil?
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def employee_params
-      params.require(:employee).permit(:name, :age, :company_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def employee_params
+    params.require(:employee).permit(:name, :age, :company_id)
+  end
 end

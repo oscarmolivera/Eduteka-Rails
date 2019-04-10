@@ -23,7 +23,7 @@
 
     <div class="field form-group">
       <%= form.label :company_id%>
-      <%= form.collection_select(:company_id, Company.all, :id, :name, {prompt: 'Seleccione una Opción'}, {class: 'form-control' }) %>
+      <%= form.collection_select(:company_id, Company.all, :id, :name, {prompt: 'Select an Option'}, {class: 'form-control' }) %>
     </div>
 
     <div class="actions">
