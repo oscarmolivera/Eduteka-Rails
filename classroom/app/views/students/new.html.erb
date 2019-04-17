@@ -1,5 +1,28 @@
-<h1>New Student</h1>
+<div class="overlay-container">
+  <div class="table-users">
+    <%= link_to 'List of All Students (GO BACK)', students_path, class: 'btn btn-success form-control' %>
+    <%= render 'form', student: @student %>
+  </div>
+</div>
 
-<%= render 'form', student: @student %>
 
-<%= link_to 'Back', students_path %>
+<div class="masthead">
+  <div class="masthead-bg"></div>
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-12 my-auto">
+        <div class="masthead-content text-white py-5 py-md-0">
+          <h1 class="mb-3">Module 8 Classroom App</h1>
+          <p id="notice"><%= notice %></p>
+          <p class="mb-5">Hello Teacher: <%= "#{current_user.name}"%> </p>
+          <div class="input-group input-group-newsletter">  
+            <p><h3>Adding a New Student</h3></p>
+            <div class="input-group form-group">
+              <%= link_to 'Sign-Out', destroy_user_session_path(protocol: 'https'), method: :delete, class: 'btn btn-danger form-control'%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

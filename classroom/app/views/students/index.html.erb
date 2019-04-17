@@ -1,44 +1,31 @@
 <div class="overlay-container">
-  <%= link_to 'New Student', new_student_path, class: 'btn btn-primary form-control' %>
-  <div class="limiter">
-		<div class="container-table100">
-			<div class="wrap-table100">
-				<div class="table100 ver1 m-b-110">
-					<div class="table100-head">
-						<table>
-							<thead>
-								<tr class="row100 head">
-                  <th>Name</th>
-                  <th>Age</th>
-                  <th>Roll number</th>
-                  <th>User</th>
-                  <th colspan="3"></th>
-								</tr>
-							</thead>
-						</table>
-					</div>
-          <div class="table100-body js-pscroll">
-						<table>
-							<tbody>
-                <% @students.each do |student| %>
-								<tr class="row100 body">
-                  <td><%= student.name %></td>
-                  <td><%= student.age %></td>
-                  <td><%= student.roll_number %></td>
-                  <td><%= student.user %></td>
-                  <td><%= link_to 'Show', student %></td>
-                  <td><%= link_to 'Edit', edit_student_path(student) %></td>
-                  <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-								</tr>
-                <% end %>
-							</tbody>
-						</table>
-					</div>
-				</div>
-      </div>
-    </div>
+  <div class="table-users">
+  <%= link_to 'Add a New Student', new_student_path, class: 'btn btn-info form-control' %>
+    <div class="header">Students</div>
+    <table cellspacing="0">
+      <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>age</th>
+          <th>Roll Number</th>
+          <th width="230" colspan = '3'>Actions</th>
+      </tr>
+      <tbody>
+        <% @students.each do |student| %>
+          <tr>
+            <td><img src="http://lorempixel.com/100/100/people/<%= student.id%>" alt="" /></td>
+            <td><%= student.name %></td>
+            <td><%= student.age %></td>
+            <td><%= student.roll_number %></td>
+            <td><%= link_to 'Show', student %></td>
+            <td><%= link_to 'Edit', edit_student_path(student) %></td>
+            <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
-</div>  
+</div>
 
 
 <div class="masthead">
@@ -51,7 +38,7 @@
           <p id="notice"><%= notice %></p>
           <p class="mb-5">Hello Teacher: <%= "#{current_user.name}"%> </p>
           <div class="input-group input-group-newsletter">  
-            <p></p>
+            <p><h3>All the Students</h3></p>
             <div class="input-group form-group">
               <%= link_to 'Sign-Out', destroy_user_session_path(protocol: 'https'), method: :delete, class: 'btn btn-danger form-control'%>
             </div>

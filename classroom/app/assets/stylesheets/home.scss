@@ -58,7 +58,7 @@
      width: 100%;
      background-color: #cd9557;
      opacity: 0.7;
-     /* z-index: 2; */
+     z-index: 2;
  }
 
  .overlay-container {
@@ -66,9 +66,8 @@
      top: 0px;
      width: auto;
      height: auto;
-     padding-left: 25%;
-     padding-right: 25%;
-     padding-top: 5%;
+     padding-left: 40%;
+     padding-top: 10%;
      z-index: 3;
  }
 
@@ -76,7 +75,7 @@
      position: relative;
      overflow: hidden;
      padding-bottom: 3rem;
-     z-index: 1;
+     z-index: 5;
  }
 
  .masthead .masthead-bg {
@@ -119,6 +118,7 @@
      text-transform: uppercase;
      letter-spacing: 1px;
      padding: 1rem;
+     z-index: 4;
  }
 
  @media (min-width: 768px) {
