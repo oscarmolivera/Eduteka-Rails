@@ -61,12 +61,12 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.assets.raise_runtime_errors = true
-  config.action_mailer.delivery_method = smtp
-  confi.action_maile.delivery_settings = {
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_settings = {
     address: 'smtp.gmail.com',
     port: '587',
     domain: 'module8-classroom.com',
-    user_name: "#{current_user.name}@module8-classroom.com",
+    user_name: 'normal@module8-classroom.com',
     password: '123456',
     authentication: 'plain',
     enable_starttls_auto: true
