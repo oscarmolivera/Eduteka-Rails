@@ -1,0 +1,9 @@
+en:
+  hello: "Hello world"
+  txt_title_login: 'Log-In'
+  name_placeholder: 'Type any username here'
+  passw_placeholder: 'Type any password here'
+  txt_btn_login: 'Log-In'
+  txt_ckb_remember: 'Remember me'
+  txt_forgot: 'Forgot Password?'
+  txt_create_new_account: 'Create an Account'

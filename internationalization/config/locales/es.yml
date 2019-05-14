@@ -1,0 +1,10 @@
+---
+es:
+  hello: "Hola mundo."
+  txt_title_login: 'Entrada'
+  name_placeholder: 'Coloque cualquier usuario aquí'
+  passw_placeholder: 'Coloque cualquier contraseña aquí'
+  txt_btn_login: 'Validar'
+  txt_ckb_remember: 'Recuérdame.'
+  txt_forgot: '¿Olvidó su Contraseña?'
+  txt_create_new_account: 'Cree su cuenta aquí.'
