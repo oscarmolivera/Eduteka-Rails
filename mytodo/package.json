@@ -1,7 +1,0 @@
-{
-  "name": "mytodo",
-  "private": true,
-  "dependencies": {
-    "eslint": "^5.15.2"
-  }
-}
