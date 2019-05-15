@@ -8,3 +8,16 @@ es:
   txt_ckb_remember: 'Recuérdame.'
   txt_forgot: '¿Olvidó su Contraseña?'
   txt_create_new_account: 'Cree su cuenta aquí.'
+
+  title_JOpe: 'Operaciones en Javascripts'
+  subTitle_JOpe: 'Eduteka Trabajo de Modulo 9. II Parte'
+  txt_addition: 'Sumatoria de números.'
+  txt_numberOne: 'Primer Número:'
+  txt_numberTwo: 'Segundo Número:'
+  txt_solution: 'Solución'
+  txt_add: 'Sumar'
+  txt_clean: 'Limpiar Datos'
+
+  txt_multiple_names: 'Imprima su Nombre'
+  txt_repetition: 'Ingrese su nombre:'
+  btn_repetition: 'Procese!'

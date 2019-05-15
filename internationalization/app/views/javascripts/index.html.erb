@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1><%= t(:title_JOpe) %></h1>
+    <p><%= t(:subTitle_JOpe) %></p>
+    <div class="login-form">
+      <h2><%= t(:txt_addition) %></h2>
+      <div class="form-group">
+        <%= label_tag 'numberA', t(:txt_numberOne) %> 
+        <%= text_field_tag 'numberA', nil, value: 1, class: 'form-control' %>
+        <%= label_tag 'numberB', t(:txt_numberTwo) %> 
+        <%= text_field_tag 'numberB', nil, class: 'form-control' %>
+      </div>
+      
+      <br>
+      <%= label_tag 'solution', t(:txt_solution)%> 
+      <div class="form-group responseA">
+      <%= text_field_tag 'solution', id:'solution' %>
+      <%= button_tag t(:txt_add), id:'addition', type: 'button', onclick: 'addition()'%>
+      <%= button_tag t(:txt_clean), id:'clean', type: 'button', onclick: 'clean()'%>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron">
+    <div class="login-form">
+       <h2><%= t(:txt_multiple_names) %></h2>
+       <%= label_tag 'name', t(:txt_repetition)%> 
+      <div class="form-group responseB">
+      <%= text_field_tag 'name', id:'name' %>
+      <%= button_tag t(:btn_repetition), id:'btn_repetition', type: 'button', onclick: 'repetition()'%>
+      <%= text_area_tag 'repetition', id:'repetition', size: "8x10" %>
+      </div>
+    </div>
+  </div>
+</div>

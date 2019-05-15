@@ -22,3 +22,11 @@
     font-size: 15px;
     font-weight: bold;
 }
+.responseA{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.responseB{
+    display: grid;
+    grid-template-columns: 1fr;
+}

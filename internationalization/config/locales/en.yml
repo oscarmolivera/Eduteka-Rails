@@ -7,3 +7,12 @@ en:
   txt_ckb_remember: 'Remember me'
   txt_forgot: 'Forgot Password?'
   txt_create_new_account: 'Create an Account'
+
+  title_JOpe: 'Javascripts Operations' 
+  subTitle_JOpe: 'Eduteka Module 9 Assignments.  Part II'
+  txt_addition: 'Addition'
+  txt_numberOne: 'First Number'
+  txt_numberTwo: 'Second Number'
+  txt_solution: 'Solution'
+  txt_add: 'Calculate'
+  txt_clean: 'Clean Inputs'

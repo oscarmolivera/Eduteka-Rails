@@ -1,5 +1,5 @@
 <div class="login-form">
-    <%= form_for(:session, url: root_path) do |f| %>
+    <%= form_for(:sessions, url: javascripts_index_path) do |f| %>
       <h2 class="text-center"><%=t(:txt_title_login)%></h2>    
       <div class="form-group">
         <%= f.text_field :user, class: 'form-control', placeholder: t(:name_placeholder), required: true%>
@@ -15,6 +15,5 @@
             <a href="#" class="pull-right"><%=t(:txt_forgot)%></a>
         </div>      
     <% end %>
-    
-  <p class="text-center"><a href="#"><%=t(:txt_create_new_account)%></a></p>
+    <p class="text-center"><%= link_to t(:txt_create_new_account), root_path%></p>
 </div>
