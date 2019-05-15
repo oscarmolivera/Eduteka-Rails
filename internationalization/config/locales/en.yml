@@ -16,3 +16,7 @@ en:
   txt_solution: 'Solution'
   txt_add: 'Calculate'
   txt_clean: 'Clean Inputs'
+
+  txt_multiple_names: 'Print your Name'
+  txt_repetition: 'Type your Name:'
+  btn_repetition: 'Print!'
