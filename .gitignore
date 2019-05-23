@@ -1,0 +1,9 @@
+/demo_blog
+/classroom/log/*
+/classroom/tmp/*
+blog/.byebug_history
+blog/config/master.key
+blog/db/development.sqlite3
+blog/log/*
+blog/tmp/*
+/internationalization
