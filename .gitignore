@@ -6,3 +6,4 @@ blog/config/master.key
 blog/db/development.sqlite3
 blog/log/*
 blog/tmp/*
+/internationalization
