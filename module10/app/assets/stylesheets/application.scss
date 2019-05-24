@@ -1,0 +1,18 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+@import 'animate';
+@import 'flexslider';
+@import 'icomoon';
+@import 'style';
+
+.onesy{
+  //background-image: url(images/img_bg_1.jpg);
+  background-image: url(asset_path('img_bg_1.jpg'));
+}
+.piama{
+  background-image: url(asset_path('img_bg_2.jpg'));
+}
+.apunay{
+  background-image: url(asset_path('img_bg_3.jpg'));
+}
